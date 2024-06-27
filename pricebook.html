@@ -1,0 +1,1679 @@
+<html><head>
+    <title>Priceset</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--script src="../ClientGlobalContext.js.aspx" type="text/javascript"></script-->
+    <style>
+        body {
+            color: #111;
+            padding: 20px;
+            margin: 0;
+            font-family: 'Mulish', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+            h2 span {
+                padding-left: 20px;
+                color: #9b9b9b;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+            table tr td {
+                border-bottom: 1px solid #f5f5f5;
+                line-height: 30px;
+                min-width: 50px;
+            }
+
+        thead {
+            font-weight: 500;
+            color: #80c858
+        }
+
+        a {
+            color: #80c858;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        tbody {
+            font-size: 13px;
+            color: #7c7c7c;
+        }
+
+        table tr:nth-child(even) {
+            background: #F9F8F9;
+        }
+        /*table tr td:first-child {
+            padding-left: 20px;
+        }*/
+
+        .wrapper {
+            font-family: 'Mulish', sans-serif !important;
+        }
+
+            .wrapper table {
+                margin-bottom: 30px;
+                box-shadow: 0 0 20px #cccccc47;
+            }
+
+        .opaque {
+            opacity: 0.4
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .w-18 {
+            width: 18%
+        }
+
+        .greenColor {
+            color: #80c858;
+        }
+
+        .dpflex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ml-5 {
+            margin-left: 5px;
+        }
+
+        .mw-26 {
+            max-width: 26px !important;
+        }
+
+        .group_btn button {
+            padding: 10px 16px;
+            border: none;
+            background: #7A9627;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+
+            .group_btn button:hover {
+                background: #95A55F;
+            }
+
+            .group_btn button:first-child {
+                background: #CFCFCF
+            }
+
+        @media screen and (max-width:1024px) {
+            .hovedgrupe li,
+            .hovedgrupe li select,
+            .hovedgrupe li input {
+                width: 100%;
+            }
+
+            h2 span {
+                padding-left: 0;
+            }
+
+            table tr td {
+                min-width: 174px;
+                min-height: 30px;
+            }
+
+            .responsive-table {
+                overflow-x: auto;
+            }
+        }
+
+        .tabs-nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs-nav li {
+            display: inline-block;
+            background: #cfcfcf;
+            color: #fefefe;
+            border-width: 1px 1px 0 1px;
+            border-style: solid;
+            border-color: #cfcfcf;
+            margin-right: 5px;
+        }
+
+        .tabs-nav a {
+            display: block;
+            padding: 10px 15px;
+            color: #000;
+            text-decoration: none;
+        }
+        /* Active tab */
+
+        .tabs-nav li.active {
+            background: #7a9627;
+            color: #ffffff;
+        }
+
+            .tabs-nav li.active a {
+                color: inherit;
+            }
+
+        .tabs-content {
+            border: 1px solid #7a96272b;
+            padding: 10px;
+            background: #FFF;
+            margin-top: 0;
+        }
+
+            .tabs-content IMG {
+                margin-right: 10px;
+            }
+
+            .tabs-content div[id]:not(:first-child) {
+                display: none;
+            }
+
+        .checkboxes {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+            .checkboxes li {
+                padding-right: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 400;
+            }
+
+        input[type="text"],
+        input[type="date" i],
+        select {
+            height: 30px;
+            border: 1px solid #d8d8d8;
+            outline: none;
+            padding: 0 10px;
+            max-width: 140px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .mr-4 {
+            margin-right: 40px;
+        }
+
+        .code_section label {
+            margin-right: 10px;
+        }
+
+        .region {
+            margin-top: 20px;
+        }
+
+        .mt-4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .range {
+            display: flex;
+            align-items: center;
+            min-height: 32px;
+            min-width: 300px;
+        }
+
+        .rangeValue input {
+            max-width: 54px;
+        }
+
+        .single {
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width:600px) {
+            .tabs-nav a {
+                padding: 6px;
+                font-size: 13px;
+            }
+
+            .tabs-nav li {
+                margin-right: 0;
+            }
+
+            .checkboxes li {
+                padding-right: 5px;
+            }
+
+                .checkboxes li:first-child {
+                    width: 80px;
+                }
+
+                .checkboxes li:nth-child(2) {
+                    width: 95px
+                }
+
+                .checkboxes li:nth-child(3) {
+                    width: 118px;
+                    padding-right: 0;
+                }
+        }
+        /**/
+
+        .comboTreeWrapper {
+            position: relative;
+            text-align: left !important;
+            max-width: 300px;
+        }
+
+        .comboTreeInputWrapper {
+            position: relative;
+        }
+
+        .comboTreeArrowBtn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            box-sizing: border-box;
+            border: 1px solid #CFCFCF;
+            background: #fff;
+            cursor: pointer;
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE10+/Edge */
+            user-select: none;
+            /* Standard */
+        }
+
+            .comboTreeArrowBtn:hover {
+                background: #cfcfcf;
+            }
+
+            .comboTreeArrowBtn:active {
+                background: #cfcfcf;
+            }
+
+        .comboTreeInputBox:focus + .comboTreeArrowBtn {
+            color: #7A9627;
+            border-top: 1px solid #7A9627;
+            border-right: 1px solid #7A9627;
+            border-bottom: 1px solid #7A9627;
+        }
+
+        .comboTreeArrowBtnImg:after {
+            content: '\25B6';
+            width: 20px;
+            height: 20px;
+            display: block;
+            content: '▼';
+            font-size: 13px;
+            margin-top: -10px;
+            color: #7a9627;
+        }
+
+        .comboTreeArrowBtnImg {
+            font-size: 0;
+        }
+
+        .comboTreeDropDownContainer {
+            display: none;
+            background: #ffffff;
+            border: 1px solid #cfcfcf;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+            .comboTreeDropDownContainer ul {
+                padding: 0px;
+                margin: 0;
+            }
+
+            .comboTreeDropDownContainer li {
+                list-style-type: none;
+                padding-left: 15px;
+            }
+
+                .comboTreeDropDownContainer li .selectable {
+                    cursor: pointer;
+                }
+
+                .comboTreeDropDownContainer li .not-selectable {
+                    cursor: not-allowed;
+                }
+
+                .comboTreeDropDownContainer li:hover {
+                    background-color: #f3f3f3
+                }
+
+                    .comboTreeDropDownContainer li:hover ul {
+                        background-color: #fff
+                    }
+
+                .comboTreeDropDownContainer li span.comboTreeItemTitle.comboTreeItemHover {
+                    background-color: #f3f3f3;
+                    color: #000;
+                    border-radius: 2px;
+                }
+
+        span.comboTreeItemTitle {
+            display: block;
+            padding: 3px;
+        }
+
+        .comboTreeDropDownContainer label {
+            cursor: pointer;
+            width: 100%;
+            display: block;
+        }
+
+        .comboTreeDropDownContainer .comboTreeItemTitle input {
+            position: relative;
+            top: 2px;
+            margin: 0px 4px 0px 0px;
+        }
+
+        .comboTreeParentPlus {
+            position: relative;
+            left: -12px;
+            top: 4px;
+            width: 4px;
+            float: left;
+            cursor: pointer;
+        }
+
+        .comboTreeWrapper .comboTreeInputBox {
+            padding: 6px;
+            border: 1px solid #cfcfcf;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 24px;
+            max-width: 100%;
+        }
+
+        .comboTreeInputBox:focus {
+            border: 1px solid #cfcfcf;
+            outline-width: 0;
+        }
+
+        .comboTreeWrapper .multiplesFilter {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #cfcfcf;
+            max-width: 100%;
+        }
+
+        ul,
+        #myUL {
+            list-style-type: none;
+        }
+
+        #myUL {
+            margin: 0;
+            padding: 15px 0;
+        }
+
+            #myUL li {
+                padding: 5px 0;
+            }
+
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none;
+            /* Safari 3.1+ */
+            -moz-user-select: none;
+            /* Firefox 2+ */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+        }
+
+            .caret::before {
+                content: "\25B6";
+                color: #7a9627;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+        .caret-down::before {
+            transform: rotate(90deg);
+        }
+
+        .nested {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .m0 {
+            margin: 0;
+        }
+
+        .subtr {
+            display: none;
+            background: #7a96271a !important;
+        }
+
+        tr.header span {
+            font-size: 20px;
+            color: #7a9627;
+            cursor: pointer;
+            width: 20px;
+            text-align: center;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .space20 {
+            padding-left: 20px
+        }
+
+        .tableClass tr td:first-child {
+            width: 50px;
+        }
+
+        @media screen and (max-width:620px) {
+            .code_section #txtPeriods {
+                width: calc(100% - 40px);
+            }
+
+            .d-flex.periodClass {
+                flex-direction: row !important;
+            }
+
+            button#refeshPeriod {
+                width: 40px;
+            }
+
+            .tabs-content .d-flex {
+                flex-direction: column;
+            }
+
+            input[type="date"] {
+                margin-bottom: 10px;
+            }
+
+            input[type="text"],
+            input[type="date" i],
+            select {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            table tr td:first-child {
+                min-width: 30px;
+            }
+
+            .code_section.mr-4 {
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+            table tr td {
+                position: relative;
+            }
+            /* Force table to not be like tables anymore */
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+                /* Hide table headers (but not display: none;, for accessibility) */
+                thead tr {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+
+            tr {
+                border: 1px solid #ccc;
+                margin-top: -1px;
+            }
+
+            table td {
+                /* Behave  like a "row" */
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 40%;
+            }
+
+            td:before {
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                left: 6px;
+                width: 36%;
+                padding-right: 4%;
+                white-space: nowrap;
+                color: #80c858;
+            }
+
+            .subtr .space20 {
+                padding-left: 40%;
+            }
+            /*
+        Label the data
+        */
+            td:nth-of-type(1):before {
+                content: "Product Code";
+            }
+
+            td:nth-of-type(2):before {
+                content: "Name";
+            }
+
+            td:nth-of-type(3):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(4):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(5):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(6):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(7):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(8):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(9):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(10):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(11):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(12):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(13):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(14):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(15):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(16):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(17):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(18):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(19):before {
+                content: attr(data-name);
+            }
+
+            td:nth-of-type(20):before {
+                content: attr(data-name);
+            }
+
+            tr.header span {
+                font-size: 25px;
+                color: #ffffff;
+                width: 83vw;
+                font-weight: bold;
+                background: #82c95b;
+                margin-left: -20px;
+            }
+        }
+
+        .activeLoader:after {
+            background: url(https://agro365-crm-test2.crm4.dynamics.com//WebResources/d365agro_spinner) center no-repeat #00000070;
+            width: 100%;
+            height: 100%;
+            display: block;
+            content: '';
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+    <meta>
+    <meta>
+    <meta>
+<meta></head>
+
+<body style="overflow-wrap: break-word;" onfocusout="parent.setEmailRange();">
+    <h2 class="greenColor">Danish Agro Prisbog</h2>
+
+
+    <div class="wrapper">
+        <header class="tabs-nav">
+            <ul>
+                <li class="active"><a href="#tab1">Sales</a></li>
+                <li><a href="#tab2">Purchase</a></li>
+            </ul>
+        </header>
+        <section class="tabs-content">
+            <div id="tab1">
+
+                <ul class="checkboxes">
+                    <li>Price Type </li>
+                    <li>
+                        <label id="lblDaily"><input type="radio" name="radioCheck" id="chkDaily" onclick="checkedDailyRadio();"> Daily Price</label>
+                    </li>
+                    <li>
+                        <label id="lblPeriodic">
+                            <input type="radio" name="radioCheck" id="chkPeriodic" onclick="checkedDailyRadio();">
+                            Periodic Price
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="region code_section" id="regionDiv">
+
+                    <ul class="checkboxes" id="regionUl">
+                        <li><label>Region</label></li>
+                    </ul>
+                </div>
+                <div>
+                    Categories
+                </div>
+                <div>
+                    <input type="text" id="txtCategories" name="txtCategories" placeholder="Select" autocomplete="off" onselect="validateCategorySearch();">
+                </div>
+                <div>
+                    <label style="color:red;" hidden="hidden" id="lblCategoryValidation">
+                        <b>Please enter either category or product code</b>
+                    </label>
+                </div>
+                <div class="d-flex">
+                    <div class="code_section mr-4">
+                        <p>Product Code</p>
+                        <div class="single">
+                            <input id="productCode" type="text" class="Recipecode1" placeholder="Enter Text">
+                        </div>
+                    </div>
+                    <!--<div class="code_section">
+                            <p>Period</p>
+                            <div class="d-flex periodClass">
+                                <input type="text" id="txtPeriods" name="txtPeriods" autocomplete="off">
+                                <button id="refeshPeriod" style="font-size:24px"><i class="fa fa-refresh"></i></button>
+                            </div>
+                        </div>-->
+                </div>
+
+
+                <div class="dpflex mt-4 mb-4">
+                    <p></p>
+                    <div class="group_btn">
+                        <button id="clearBtn">Clear</button>
+                        <button id="searchBtn">Search</button>
+                    </div>
+                </div>
+
+                <!--class="responsive-table"-->
+                <div class="resultSales responsive-table">
+                </div>
+            </div>
+            <!--Tab 1 ends here-->
+            <!--Tab 2 starts here-->
+            <div id="tab2">
+                <ul class="checkboxes">
+                    <li>Price Type </li>
+                    <li>
+                        <label id="lblDailyP"><input type="radio" name="radioCheckP" id="chkDailyP" onclick="checkedDailyRadioP();"> Daily Price</label>
+                    </li>
+                    <li>
+                        <label id="lblPeriodicP">
+                            <input type="radio" name="radioCheckP" id="chkPeriodicP" onclick="checkedDailyRadioP();">
+                            Periodic Price
+                        </label>
+                    </li>
+                </ul>
+                <div class="region code_section" id="regionDivP">
+                    <ul class="checkboxes" id="regionUlP">
+                        <li><label>Region</label></li>
+                    </ul>
+                </div>
+                <div>
+                    Categories
+                </div>
+                <div>
+                    <input type="text" id="txtCategoriesP" name="txtCategoriesP" placeholder="Select" autocomplete="off" onselect="validateCategorySearchP();">
+                </div>
+                <div>
+                    <label style="color:red;" hidden="hidden" id="lblCategoryValidationP">
+                        <b>Please enter either category or product code</b>
+                    </label>
+                </div>
+                <div class="d-flex">
+                    <div class="code_section mr-4">
+                        <p>Product Code</p>
+                        <div class="single">
+                            <input id="productCodeP" type="text" class="Recipecode1" placeholder="Enter Text">
+                        </div>
+                    </div>
+                    <!--<div class="code_section">
+                            <p>Period</p>
+                            <div class="d-flex periodClass">
+                                <input type="text" id="txtPeriods" name="txtPeriods" autocomplete="off">
+                                <button id="refeshPeriod" style="font-size:24px"><i class="fa fa-refresh"></i></button>
+                            </div>
+                        </div>-->
+                </div>
+
+
+                <div class="dpflex mt-4 mb-4">
+                    <p></p>
+                    <div class="group_btn">
+                        <button id="clearBtnP">Clear</button>
+                        <button id="searchBtnP">Search</button>
+                    </div>
+                </div>
+
+                <div class="resultPurchase responsive-table">
+                </div>
+
+            </div>
+            <!--Tab 2 end-->
+
+        </section>
+
+    </div>
+
+    <template id="categoryHeaderTemplate">
+        <!--Category-->
+        <h3 class="greenColor m0"></h3>
+    </template>
+
+    <template id="regionHeaderTemplate">
+        <!--Region-->
+        <h4></h4>
+    </template>
+
+    <template id="resultTableTemplate">
+        <!--Product data-->
+        <table class="tableClass">
+            <thead>
+                <tr id="resultRowHeader">
+                    <td>Product Code</td>
+                    <td>Name</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="resultRowTemplate">
+
+        <tr id="resultRow" class="header">
+            <td></td>
+            <td></td>
+        </tr>
+
+    </template>
+
+    <template id="regionLiTemplate">
+        <li><label><input type="checkbox"><span id="text"></span></label></li>
+    </template>
+
+    <script src="https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/comboTreePlugin.js?v2" type="text/javascript"></script>
+    <script type="text/javascript">
+        const categoryUrl = 'https://danishagropricebookdev.azurewebsites.net/api/GetCategories?code=2ZV_XsBEivGofsnrjViZPH1Bb4p0vd3c4ARC3KGh6y5qAzFuy-IZmQ==';
+        const periodUrl = 'https://danishagropricebookdev.azurewebsites.net/api/GetPeriods?code=Ts4D6tfxJHSYCtFfI2U5fkpEKnAlo9fIMmkzMhIjyDZUAzFuu-weCA==';
+        const pricedataUrl = 'https://danishagropricebookdev.azurewebsites.net/api/GetPriceDatas?code=HuMOK-SAU8Ke16wqVFBnENNiSHgcqVwgCq47iN0lEianAzFuhP3ZQQ==';
+        const regionUrl = 'https://danishagropricebookdev.azurewebsites.net/api/GetRegions?code=Ykn_6ZpvQjxkMCuN1EbtZ_NdsYmx-dmSKvtE1KRfpqXyAzFuOvjRrg==';
+
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+
+        const searchType = {
+            Sales: 0,
+            Purchase: 1
+        };
+        const regionType = {
+            Sales: 'Sales',
+            Purchase: 'Purchase'
+        };
+
+        let categoryTreeSales;
+        let categoryTreeSalesP;
+        let periodTreeSales;
+        let periodDates;
+        $(".wrapper").addClass("activeLoader");
+
+        $.expr[':'].icontains = function(obj, index, meta, stack) {
+            return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase()) >= 0;
+        };
+
+        $('tr.header').click(function() {
+            $(this).find('span').text(function(_, value) {
+                return value == '-' ? '+' : '-'
+            });
+            $(this).nextUntil('tr.header').css('display', function(i, v) {
+                return this.style.display === 'table-row' ? 'none' : 'table-row';
+            });
+        });
+
+        function getSubCategories(subCats) {
+            let subs = [];
+            var j=0;
+            subCats.forEach(s => {
+                if(s.subCategories == null ){
+                     subs.push({
+                        id: j,
+                        title: s.name
+                    });
+                }
+                else{
+                    subs.push({
+                        id: j,
+                        title: s.name,
+                        subs: getSubCategories(s.subCategories)
+                    });
+                }
+
+                console.log(s);
+            j++;
+            });
+            return subs;
+        }
+
+        function loadCategories() {
+            jQuery.getJSON(categoryUrl, (data) => {
+                let categoryData = [];
+                let i=0;
+                data.forEach(cat => {
+
+                    categoryData.push({
+                        id: i,
+                        title: cat.name,
+                        subs: getSubCategories(cat.subCategories)
+                    });
+
+                i++;
+                });
+
+                categoryTreeSales = $('#txtCategories').comboTree({
+                    source: categoryData,
+                    isMultiple: true,
+                    cascadeSelect: true,
+                    collapse: true,
+                    selectableLastNode: true
+                });
+
+                $(".wrapper").removeClass("activeLoader");
+
+            }).fail((err) => {
+                console.error(err);
+            });
+
+        }
+
+        function loadCategoriesP() {
+            jQuery.getJSON(categoryUrl, (data) => {
+                let categoryData = [];
+                let k=0;
+                data.forEach(cat => {
+
+                    categoryData.push({
+                        id: k,
+                        title: cat.name,
+                        subs: getSubCategories(cat.subCategories)
+                    });
+                    console.log(getSubCategories(cat.subCategories));
+                k++;
+                });
+                //console.log(categoryData);
+                categoryTreeSalesP = $('#txtCategoriesP').comboTree({
+                    source: categoryData,
+                    isMultiple: true,
+                    cascadeSelect: true,
+                    collapse: true,
+                    selectableLastNode: true
+                });
+
+                $(".wrapper").removeClass("activeLoader");
+
+            }).fail((err) => {
+                console.error(err);
+            });
+
+        }
+
+        function loadAllPeriods() {
+            jQuery.getJSON(periodUrl, (data) => {
+                periodDates = data;
+                let periods = [];
+                data.forEach((d, i) => {
+                    let period = formatPeriod(d);
+
+                    periods.push({
+                        id: i,
+                        title: period
+                    });
+
+                });
+
+                if (periodTreeSales != undefined && periodTreeSales.destroy != undefined) {
+                    periodTreeSales.destroy();
+                }
+                periodTreeSales = $('#txtPeriods').comboTree({
+                    source: periods,
+                    isMultiple: true,
+                    cascadeSelect: false,
+                    collapse: true,
+                    selectableLastNode: true
+                });
+
+            }).fail((err) => {
+                console.error(err);
+            });
+
+        }
+
+        //on page load load categtory and periods
+        jQuery(document).ready(function($) {
+
+            //load the categories on page load
+            checkedPeriodicRadio();
+            loadCategories();
+            //loadAllPeriods();
+
+            checkedPeriodicRadioP();
+            loadCategoriesP();
+
+            loadRegion();
+        });
+
+        function removeDaily(array) {
+            const item = "Daily";
+            let index = array.indexOf(item);
+            if (index !== -1) {
+                array.splice(index, 1);
+            }
+            return array;
+        }
+
+        //loads region for both sales and purchase
+        function loadRegion() {
+            //sales
+            let url = regionUrl + regionType.Sales;
+            jQuery.getJSON(url, (data) => {
+                data = removeDaily(data);
+                console.log(data);
+                let ul = document.querySelector('#regionUl');
+                data.forEach(el => {
+                    processRegionLi(ul, el, 'region');
+                });
+                toggleCheckRegion('region', true);
+            });
+
+
+            //purchase
+            url = regionUrl + regionType.Purchase;
+            jQuery.getJSON(url, (data) => {
+                data = removeDaily(data);
+                console.log(data);
+                let ul = document.querySelector('#regionUlP');
+                data.forEach(el => {
+                    processRegionLi(ul, el, 'regionP');
+                });
+                toggleCheckRegion('regionP', true);
+            });
+        }
+
+        function processRegionLi(ul, el, name) {
+            let regionLi = document.importNode(document.querySelector('#regionLiTemplate').content, true);
+            let check = regionLi.querySelector('input');
+            check.setAttribute('name', name);
+            check.setAttribute('value', el);
+            regionLi.querySelector('#text').innerText = el;
+
+            ul.appendChild(regionLi);
+        }
+
+        //when the refresh button is clicked
+        jQuery('#refeshPeriod').click((ev) => {
+
+            let productCodes = jQuery('#productCode').val();
+            let req;
+
+            if (productCodes != undefined && productCodes != '') {
+                //load period by product code
+                req = {
+                    type: 1,
+                    productIds: productCodes.split(',')
+                };
+
+            } else if (categoryTreeSales != undefined) {
+                //load period by category
+                req = {
+                    type: 0,
+                    categories: categoryTreeSales.getSelectedItemsTitle()
+                };
+            }
+
+            $.ajax({
+                type: 'post',
+                url: periodUrl,
+                data: JSON.stringify(req),
+                contentType: "application/json; charset=utf-8",
+                traditional: true,
+                success: function(data) {
+
+                    console.log('Periods');
+                    console.log(data);
+
+                    periodDates = data;
+                    let periods = [];
+                    data.forEach((d, i) => {
+
+                        let period = formatPeriod(d);
+
+                        periods.push({
+                            id: i,
+                            title: period
+                        });
+
+                    });
+
+                    if (periodTreeSales != undefined && periodTreeSales.destroy != undefined) {
+                        periodTreeSales.destroy();
+                    }
+                    periodTreeSales = $('#txtPeriods').comboTree({
+                        source: periods,
+                        isMultiple: true,
+                        cascadeSelect: false,
+                        collapse: true,
+                        selectableLastNode: true
+                    });
+                    console.log(periodTreeSales);
+                }
+            });
+
+        });
+
+        function validateSearch() {
+            const selectedCategories = categoryTreeSales.getSelectedItemsTitle();
+            const selectedProductCodes = getSelectedProductCodes('#productCode');
+            if (selectedCategories === false && selectedProductCodes.length === 0) {
+                document.querySelector("#lblCategoryValidation").style.display = 'block';
+                return false;
+            } else {
+                document.querySelector("#lblCategoryValidation").style.display = 'none';
+                return true;
+            }
+
+        }
+
+        function validateSearchP() {
+            const selectedCategories = categoryTreeSalesP.getSelectedItemsTitle();
+            const selectedProductCodes = getSelectedProductCodes('#productCodeP');
+            if (selectedCategories === false && selectedProductCodes.length === 0) {
+                document.querySelector("#lblCategoryValidationP").style.display = 'block';
+                return false;
+            } else {
+                document.querySelector("#lblCategoryValidationP").style.display = 'none';
+                return true;
+            }
+
+        }
+
+        function toggleCheckRegion(name, value) {
+            let names = document.getElementsByName(name);
+            if (names != null) {
+                names.forEach(chk => {
+                    chk.checked = value;
+                });
+            }
+        }
+
+        function checkedPeriodicRadio() {
+            document.getElementById("chkPeriodic").checked = true;
+            if (document.getElementById("chkPeriodic").checked === true) {
+                document.getElementById("regionDiv").style.display = "block";
+                toggleCheckRegion('region', true);
+                //document.getElementById("chkEast").checked = true;
+                //document.getElementById("chkWest").checked = true;
+            }
+        }
+
+        function checkedPeriodicRadioP() {
+            document.getElementById("chkPeriodicP").checked = true;
+            if (document.getElementById("chkPeriodicP").checked === true) {
+                document.getElementById("regionDivP").style.display = "block";
+                toggleCheckRegion('regionP', true);
+                //document.getElementById("chkEastP").checked = true;
+                //document.getElementById("chkWestP").checked = true;
+            }
+        }
+
+        function checkedDailyRadio() {
+            if (document.getElementById("chkDaily").checked === true) {
+                toggleCheckRegion('region', false);
+                //document.getElementById("chkEast").checked = false;
+                //document.getElementById("chkWest").checked = false;
+                document.getElementById("regionDiv").style.display = "none";
+            } else if (document.getElementById("chkPeriodic").checked === true) {
+                toggleCheckRegion('region', true);
+                //document.getElementById("chkEast").checked = true;
+                //document.getElementById("chkWest").checked = true;
+                document.getElementById("regionDiv").style.display = "block";
+            }
+        }
+
+        function checkedDailyRadioP() {
+            if (document.getElementById("chkDailyP").checked === true) {
+
+                toggleCheckRegion('regionP', false);
+                //document.getElementById("chkEastP").checked = false;
+                //document.getElementById("chkWestP").checked = false;
+                document.getElementById("regionDivP").style.display = "none";
+            } else if (document.getElementById("chkPeriodicP").checked === true) {
+
+                toggleCheckRegion('regionP', true);
+                //document.getElementById("chkEastP").checked = true;
+                //document.getElementById("chkWestP").checked = true;
+                document.getElementById("regionDivP").style.display = "block";
+            }
+        }
+
+        //sales search functionality
+        jQuery('#searchBtn').click((ev) => {
+            if (validateSearch()) {
+                //validation done
+                $(".wrapper").addClass("activeLoader");
+                const req = getSearchRequestSales();
+
+                jQuery.ajax({
+                    type: 'post',
+                    url: pricedataUrl,
+                    data: JSON.stringify(req),
+                    contentType: "application/json; charset=utf-8",
+                    traditional: true,
+                    success: processSearchResultSales
+                });
+            }
+        });
+
+        //purchase search functionality
+        jQuery('#searchBtnP').click((ev) => {
+            if (validateSearchP()) {
+                //validation done
+                $(".wrapper").addClass("activeLoader");
+                const req = getSearchRequestPurchase();
+
+                jQuery.ajax({
+                    type: 'post',
+                    url: pricedataUrl,
+                    data: JSON.stringify(req),
+                    contentType: "application/json; charset=utf-8",
+                    traditional: true,
+                    success: processSearchResultPurchase
+                });
+            }
+        });
+
+        function processSearchResultPurchase(data) {
+            console.log('got purchase search result');
+            console.log(data);
+
+            //clear the content first
+            document.querySelector('.resultPurchase').innerHTML = '';
+
+            if (data.length == 0) {
+                $(".wrapper").removeClass("activeLoader");
+            }
+
+            data.forEach(cat => {
+                processCategory(cat, '.resultPurchase');
+            });
+        }
+
+        function processSearchResultSales(data) {
+            console.log('got search result');
+            console.log(data);
+
+            //clear the content first
+            document.querySelector('.resultSales').innerHTML = '';
+
+            if (data.length == 0) {
+                $(".wrapper").removeClass("activeLoader");
+            }
+
+            data.forEach(cat => {
+                processCategory(cat, '.resultSales');
+            });
+        }
+
+        function processCategory(cat, node) {
+            let catTemp = document.importNode(document.querySelector('#categoryHeaderTemplate').content, true);
+
+            console.log(`Category : ${cat.name}`);
+            catTemp.querySelector("h3").innerText = cat.name;
+            document.querySelector(node).appendChild(catTemp);
+
+            cat.locations.forEach(loc => {
+                processLocations(loc, node);
+            });
+        }
+
+        function processLocations(loc, node) {
+
+            let regionTemp = document.importNode(document.querySelector('#regionHeaderTemplate').content, true);
+            console.log(`Location : ${loc.name}`);
+            regionTemp.querySelector("h4").innerText = loc.name;
+            document.querySelector(node).appendChild(regionTemp);
+
+            let periods = processPeriods(loc.pricebookLines);
+            console.log(periods);
+            loc.pricebookLines = processLinesToAddMissingPeriods(loc.pricebookLines, periods);
+
+            let tbody = drawLineHeader(loc.pricebookLines[0], node);
+
+            loc.pricebookLines.forEach(line => {
+                processLine(line, tbody);
+            });
+        }
+
+        //code to fix issue with products having non symetrical periods
+        function processPeriods(lineItems) {
+            let periods = [];
+            //process periods
+            lineItems.forEach(el => {
+                el.periods.forEach(p => {
+                    let result = periods.find(p1 => new Date(p1.startDate).valueOf() === new Date(p.startDate).valueOf() && new Date(p1.endDate).valueOf() === new Date(p.endDate).valueOf());
+                    if (result === undefined) {
+                        periods.push({
+                            startDate: p.startDate,
+                            endDate: p.endDate,
+                            price: 0
+                        });
+                    }
+                });
+            });
+            periods = periods.sort((p1, p2) => {
+                return new Date(p1.startDate).valueOf() - new Date(p2.startDate).valueOf();
+            });
+            return periods;
+        }
+
+        function processLinesToAddMissingPeriods(lineItems, periods) {
+            lineItems.forEach(el => {
+                //find for missing periods and add them in the list
+                periods.forEach(p => {
+                    let result = el.periods.find(p1 => new Date(p1.startDate).valueOf() === new Date(p.startDate).valueOf() && new Date(p1.endDate).valueOf() === new Date(p.endDate).valueOf());
+
+                    if (result == undefined) {
+
+                        el.periods.push({
+                            startDate: p.startDate,
+                            endDate: p.endDate,
+                            price: 0,
+                            note: ''
+                        });
+                    }
+                });
+                //sort the periods
+                el.periods = el.periods.sort((p1, p2) => {
+                    return new Date(p1.startDate).valueOf() - new Date(p2.startDate).valueOf();
+                });
+            });
+            return lineItems;
+        }
+
+        function drawLineHeader(line, node) {
+
+            let resultTableHeader = document.importNode(document.querySelector('#resultTableTemplate').content, true);
+
+            line.periods.forEach(period => {
+                addPeriodTd(period, resultTableHeader.querySelector('#resultRowHeader'));
+            });
+            let tbody = resultTableHeader.querySelector('tbody');
+            document.querySelector(node).appendChild(resultTableHeader);
+            return tbody;
+        }
+
+        function addPeriodTd(period, tr) {
+
+            let td = document.createElement('td');
+            //td.setAttribute("data-name", formatPeriod(period));
+            td.textContent = formatPeriod(period);
+
+            tr.appendChild(td);
+        }
+
+        function formatPeriod(period) {
+
+            let start = new Date(period.startDate);
+            let startMonYear = `${monthNames[start.getMonth()]}-${start.getFullYear() % 2000}`;
+            let end = new Date(period.endDate);
+            let endMonYear = `${monthNames[end.getMonth()]}-${end.getFullYear() % 2000}`;
+            let periodHeader = `${monthNames[start.getMonth()]}-${start.getFullYear() % 2000} to ${monthNames[end.getMonth()]}-${end.getFullYear() % 2000}`;
+            if (startMonYear == endMonYear) {
+                periodHeader = `${monthNames[start.getMonth()]}-${start.getFullYear() % 2000}`;
+            }
+            return periodHeader;
+        }
+
+        function processLine(line, tbody) {
+
+            let resultRowTemp = document.importNode(document.querySelector('#resultRowTemplate').content, true);
+
+            let tr = resultRowTemp.querySelector('#resultRow');
+            let tds = tr.querySelectorAll('td');
+            tds[0].textContent = line.productCode;
+            tds[1].textContent = line.name;
+
+            line.periods.forEach(p => {
+                let td = document.createElement('td');
+                td.setAttribute("data-name", formatPeriod(p));
+
+                td.textContent = p.price.toLocaleString('da-DK') + getNoteText(p) + getHarvestYear(p);
+                tr.appendChild(td);
+            });
+            tbody.appendChild(resultRowTemp);
+
+            $(".wrapper").removeClass("activeLoader");
+        }
+
+        function getNoteText(p) {
+            if (p.note !== null && p.note !== '') {
+                return ` (${p.note.trim()})`;
+            }
+            return '';
+        }
+
+        function getHarvestYear(p) {
+            console.log('harvest year');
+            console.log(p);
+            return (p.harvestYear > 0) ? ` (Harvest Year: ${p.harvestYear})` : '';
+        }
+
+        function getSearchRequestPurchase() {
+            const selectedCategories = getSelectedCategories(categoryTreeSalesP);
+            const selectedProductCodes = getSelectedProductCodes('#productCodeP');
+            //const selectedPeriods = getSelectedPeriods();
+
+            const req = {
+                productIds: selectedProductCodes,
+                categories: selectedCategories,
+                periods: [],
+                isDailyPrice: (document.querySelector("#chkDailyP").checked === true),
+                isPeriodPrice: (document.querySelector("#chkPeriodicP").checked === true),
+                regions: getSelectedRegions('regionP'),
+                searchType: searchType.Purchase
+            };
+
+            console.log('Search Params');
+            console.log(req);
+
+            return req;
+        }
+
+        //this function constructs the search object ready to send to the server
+        function getSearchRequestSales() {
+            const selectedCategories = getSelectedCategories(categoryTreeSales);
+            const selectedProductCodes = getSelectedProductCodes('#productCode');
+            //const selectedPeriods = getSelectedPeriods();
+
+            const req = {
+                productIds: selectedProductCodes,
+                categories: selectedCategories,
+                periods: [],
+                isDailyPrice: (document.querySelector("#chkDaily").checked === true),
+                isPeriodPrice: (document.querySelector("#chkPeriodic").checked === true),
+                regions: getSelectedRegions('region'),
+                searchType: searchType.Sales
+            };
+
+            console.log('Search Params');
+            console.log(req);
+
+            return req;
+        }
+
+        function getSelectedRegions(ctrlName) {
+            let result = [];
+            let selected = document.getElementsByName(ctrlName);
+            selected.forEach(check => {
+                if (check.checked === true) {
+                    result.push(check.value);
+                }
+            });
+
+            // Pass region values static if the frontend values are blank
+            if (result == "") {
+                result = ["20", "40", "50", "70", "80"];
+            }
+            console.log(result);
+            return result;
+        }
+
+        function getSelectedCategories(ctrl) {
+            let selectedCats = ctrl.getSelectedItemsTitle();
+            if (selectedCats) {
+                return selectedCats;
+            } else {
+                return [];
+            }
+        }
+
+        function getSelectedProductCodes(ctrl) {
+            const productCodes = jQuery(ctrl).val();
+            return (productCodes != undefined && productCodes != '') ? productCodes.split(',') : [];
+        }
+
+        function getSelectedPeriods() {
+            const selectedPeriodIds = periodTreeSales.getSelectedItemsId();
+            let selectedPeriods = [];
+            if (selectedPeriodIds) {
+                selectedPeriodIds.forEach(i => {
+                    selectedPeriods.push(periodDates[parseInt(i)]);
+                });
+            }
+            return selectedPeriods;
+        }
+
+        // Tree view
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        };
+
+
+        ///////
+
+        $(function() {
+            $('.tabs-nav a').click(function() {
+
+                // Check for active
+                $('.tabs-nav li').removeClass('active');
+                $(this).parent().addClass('active');
+
+                // Display active tab
+                let currentTab = $(this).attr('href');
+                $('.tabs-content div#tab1,.tabs-content div#tab2').hide();
+                $(currentTab).show();
+
+                return false;
+            });
+
+        });
+
+        $(document).ready(function() {
+            $('tr.parent')
+                .css("cursor", "pointer")
+                .attr("title", "Click to expand/collapse")
+                .click(function() {
+                    $(this).siblings('.child-' + this.id).toggle();
+                });
+            //$('tr[@class^=child-]').hide().children('td');
+
+
+        });
+    </script>
+    <script>
+        // A $( document ).ready() block.
+        /*
+        $(document).ready(function() {
+
+            var priceType = [];
+            var region = [];
+            var userSettings = parent.Xrm.Utility.getGlobalContext().userSettings;
+            var userId = userSettings.userId;
+            parent.Xrm.WebApi.retrieveMultipleRecords("d365agro_pricebookpermission", "?$select=d365agro_region, d365agro_pricetype&$filter=_d365agro_salesperson_value eq " + userId).then(
+                function success(result) {
+                    if (result !== null) {
+                        for (var i = 0; i < result.entities.length; i++) {
+                            if (result.entities[i]["d365agro_pricetype"] !== null && typeof result.entities[i]["d365agro_pricetype"] !== "undefined") {
+                                var pType = result.entities[i]["d365agro_pricetype@OData.Community.Display.V1.FormattedValue"];
+                                var typeSplit = pType.split('; ');
+                                for (var k = 0; k < typeSplit.length; k++) {
+                                    priceType.push(typeSplit[k]);
+                                }
+                            }
+                            if (result.entities[i]["d365agro_region"] !== null && typeof result.entities[i]["d365agro_region"] !== "undefined") {
+                                reg = result.entities[i]["d365agro_region@OData.Community.Display.V1.FormattedValue"];
+                                var regionSplit = reg.split('; ');
+                                for (var k = 0; k < regionSplit.length; k++) {
+                                    region.push(regionSplit[k]);
+                                }
+                            }
+                        }
+
+                        var east = "East";
+                        var west = "West";
+                        var daily = "Daily";
+                        var periodic = "Periodic";
+
+                        //// West
+                        if (region.includes(east)) {
+                            document.getElementById("chkEast").style.display = true;
+                            document.getElementById("lblEast").style.display = 'block';
+
+                            document.getElementById("chkEastP").style.display = true;
+                            document.getElementById("lblEastP").style.display = 'block';
+                        } else {
+                            document.getElementById("chkEast").style.display = false;
+                            document.getElementById("lblEast").style.display = 'none';
+
+                            document.getElementById("chkEastP").style.display = false;
+                            document.getElementById("lblEastP").style.display = 'none';
+                        }
+
+                        //// East
+                        if (region.includes(west)) {
+                            document.getElementById("chkWest").style.display = true;
+                            document.getElementById("lblWest").style.display = 'block';
+
+                            document.getElementById("chkWestP").style.display = true;
+                            document.getElementById("lblWestP").style.display = 'block';
+                        } else {
+                            document.getElementById("chkWest").style.display = false;
+                            document.getElementById("lblWest").style.display = 'none';
+
+                            document.getElementById("chkWestP").style.display = false;
+                            document.getElementById("lblWestP").style.display = 'none';
+                        }
+
+                        //// Daily
+                        if (priceType.includes(daily)) {
+                            document.getElementById("chkDaily").style.display = true;
+                            document.getElementById("lblDaily").style.display = 'block';
+
+                            document.getElementById("chkDailyP").style.display = true;
+                            document.getElementById("lblDailyP").style.display = 'block';
+                        } else {
+                            document.getElementById("chkDaily").style.display = false;
+                            document.getElementById("lblDaily").style.display = 'none';
+
+                            document.getElementById("chkDailyP").style.display = false;
+                            document.getElementById("lblDailyP").style.display = 'none';
+                        }
+
+                        //// Periodic
+                        if (priceType.includes(periodic)) {
+                            document.getElementById("chkPeriodic").style.display = true;
+                            document.getElementById("lblPeriodic").style.display = 'block';
+
+                            document.getElementById("chkPeriodicP").style.display = true;
+                            document.getElementById("lblPeriodicP").style.display = 'block';
+                        } else {
+                            document.getElementById("chkPeriodic").style.display = false;
+                            document.getElementById("lblPeriodic").style.display = 'none';
+
+                            document.getElementById("chkPeriodicP").style.display = false;
+                            document.getElementById("lblPeriodicP").style.display = 'none';
+                        }
+    </script>
+
+</body></html>

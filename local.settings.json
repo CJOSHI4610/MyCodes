@@ -1,0 +1,18 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "CRM:UserId": "6236385d-8a94-4789-8a46-526da920f41b",
+    "CRM:Password": "~hi7Q~nPYp7whdFiRk0umiLdInw9qJeBVOw_e",
+    "CRM:Domain": "54e38b86-b0d2-4159-9587-7150a97954a4",
+    "CRM:BaseURL": "https://agro365-crm-test2.crm4.dynamics.com/",
+    "CRM:APIEndpoint": "api/data/v9.2/",
+    "SQL:UserId": "CRM",
+    "SQL:Password": "lXSlVdHNsCYE2DSuMk/tAx0zivTg2SCqj0X0eqxvNcA=",
+    "SQL:Server": "sql-danishagrobi-dev.database.windows.net",
+    "SQL:Database": "DanishAgroBIDW"
+  }
+}
