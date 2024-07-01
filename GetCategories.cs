@@ -1,11 +1,10 @@
-```csharp
-public void PrintSubCategories(List subCategories, int level)
+public void PrintSubCategories(List subCategories, int leve)
 {
-    StringBuilder output = new StringBuilder();
+    var output = new StringBuilder();
 
     foreach (var subCategory in subCategories)
     {
-        output.AppendLine(new string(' ', level * 2) + $"SubCategory: {subCategory.Name}");
+        output.Append(new string(' ', level * 2) + $"SubCategory: {subCategory.Name}");
         PrintSubCategories(subCategory.SubCategories, level + 2);
     }
 
