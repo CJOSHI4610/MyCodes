@@ -1,13 +1,14 @@
-public void PrintSubCategories(List subCategories, int level, StringBuilder output)
-{
-    foreach (var subCategory in subCategories)
-    {
-        output.Append(new string(' ', level * 2));
-        output.AppendLine($"SubCategory: {subCategory?.Name}");
+using System;
 
-        if (subCategory?.SubCategories != null)
+namespace MyConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
         {
-            PrintSubCategories(subCategory.SubCategories, level + 2, output);
+            Console.WriteLine("Hello, World!");
+            // Introduce a syntax error by removing a semicolon
+            Console.WriteLine("This line is missing a semicolon")
         }
     }
 }
