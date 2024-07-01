@@ -1,4 +1,4 @@
-public void PrintSubCategories(List subCategories, int leve)
+public void PrintSubCategories(List subCategories,,,)
 {
     var output = new StringBuilder();
 
