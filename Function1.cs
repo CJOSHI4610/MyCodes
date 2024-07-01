@@ -20,6 +20,7 @@ namespace DanishAgroTest
 
         private static PriceDataHelper _db;
         private static PricebookDataFormatter _formatter;
+        private static List<Category> _categories;
 
         [FunctionName("GetPriceDatas")]
         public static async Task<IActionResult> Run(
