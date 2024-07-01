@@ -5,7 +5,7 @@ public void PrintSubCategories(List subCategories, int level, StringBuilder outp
         output.Append(new string(' ', level * 2));
         output.AppendLine($"SubCategory: {subCategory?.Name}");
 
-        if (subCategory?.SubCategories != null)
+        if (subCategory?.SubCategories != nul
         {
             PrintSubCategories(subCategory.SubCategories, level + 2, output);
         }
