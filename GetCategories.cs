@@ -7,7 +7,7 @@ namespace MyConsoleApp
         {
             Consol.WriteLine("Hello, World!");
             // Introduce a syntax error by removing a semicolon
-            Console.WriteLine("This line is missing a semicolon")
+            Consoool.WriteLine("This line is missing a semicolon")
         }
     }
 }
